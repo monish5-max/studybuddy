@@ -53,7 +53,7 @@ nav ul li:hover .dropdown{
 
 .dropdown{
     display: none;
-    position: absolute;
+    position: static;
     top: 50%;
     left: 0;
     background: white;
@@ -87,21 +87,6 @@ nav ul li a i {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-}
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-}
-@media (max-width: 768px) {
-    .menu-toggle:checked ~ ul {
-        display: flex;
-    }
 }
 .hero{
     background: linear-gradient(160deg, #14133B, #2A2775);
@@ -197,4 +182,24 @@ footer{
 .footer-links a:hover {
     color: #FFB648;
     transition: color 0.2s ease;
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu-toggle:checked ~ ul {
+        display: flex;
+    }
+    .dropdown {
+        position: static;
+        box-shadow: none;
+        padding-left: 16px;
+        min-width: unset;
+        width: 100%;
+    }
 }
