@@ -190,7 +190,13 @@ footer{
     nav ul {
         display: none;
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background: #F7F5FF;
+        padding: 20px;
+        box-shadow: 0 12px 20px rgba(20, 19, 59, 0.1);
     }
     .menu-toggle:checked ~ ul {
         display: flex;
